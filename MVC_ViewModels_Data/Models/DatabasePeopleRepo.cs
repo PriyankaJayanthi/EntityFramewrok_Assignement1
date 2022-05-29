@@ -27,22 +27,6 @@ namespace MVC_ViewModels_Data.Models
             _personList.Add(newPerson);
             _context.Person.Add(newPerson);
             _context.SaveChanges();
-            /*foreach (Person item in _personList)
-            {
-                if (item.PersonId == newPerson.PersonId)
-                {
-                    item.Name = newPerson.Name;
-                    item.ContactNumber = newPerson.ContactNumber;
-                    item.City = newPerson.City;
-                    _context.Person.Update(item);
-                    _personList = _context.Person.ToList();
-                }
-                else 
-                {
-                    _context.Person.Add(item);
-                }
-                _context.SaveChanges();
-            }*/
             return newPerson;
         }
 
